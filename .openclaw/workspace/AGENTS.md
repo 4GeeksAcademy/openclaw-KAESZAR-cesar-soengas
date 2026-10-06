@@ -1,5 +1,4 @@
-```sh                                                                                                                                                    
-  cat > /root/.openclaw/workspace/AGENTS-limites.md <<'EOF'                                                                                              
+                                                                                              
   # Complemento para `AGENTS.md`: límites estrictos                                                                                                      
                                                                                                                                                          
   Estas reglas complementan `AGENTS.md`. No autorizan acciones que prohíban instrucciones de mayor prioridad ni amplían el alcance de una solicitud.     
@@ -31,5 +30,4 @@ claramente autorizadas.
   - Para tareas claras, acotadas y reversibles, actúa sin pedir confirmación innecesaria.                                                                
   - Si no puedes verificar un cambio, dilo con claridad. No afirmes que una acción se completó sin comprobar el resultado.                               
   - Ante un error, detente antes de improvisar una alternativa que amplíe el alcance o aumente el riesgo.                                                
-  EOF                                                                                                                                                    
-```                                                                        
+                                                                       

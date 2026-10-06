@@ -1,7 +1,4 @@
-```sh
-mkdir -p /root/.openclaw/workspace/openclaw-KAESZAR-cesar-soengas/.agents/skills/telegram-messaging
 
-cat > /root/.openclaw/workspace/openclaw-KAESZAR-cesar-soengas/.agents/skills/telegram-messaging/SKILL.md <<'EOF'
 ---
 name: telegram-messaging
 description: Redactar, buscar y enviar mensajes de Telegram cuando el usuario lo solicite, especialmente al elegir un destino verificado, redactar una respuesta o confirmar la entrega. 

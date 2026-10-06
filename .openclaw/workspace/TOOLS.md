@@ -1,5 +1,4 @@
-```sh                                                                                                                                  
-  cat > /root/.openclaw/workspace/TOOLS.md <<'EOF'                                                                                     
+                                                                                    
   # TOOLS.md - Servicios y valores predeterminados                                                                                     
                                                                                                                                        
   Este archivo documenta los servicios solicitados y las reglas prácticas para usarlos. El estado de conexión se anota solo cuando está
@@ -42,4 +41,3 @@ actuar sobre él.
   - Si una operación no está disponible o falta un dato esencial, explicar el límite concreto y preguntar solo lo necesario. Nunca     
 inventar permisos, conexiones ni resultados.                                                                                           
   EOF                                                                                                                                  
-```  

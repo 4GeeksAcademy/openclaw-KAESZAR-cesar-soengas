@@ -1,5 +1,4 @@
-```sh                                                                                                                                                      
-  cat > /root/.openclaw/workspace/openclaw-KAESZAR-cesar-soengas/SKILLS_DESIGN.md <<'EOF'                                                                  
+                                                                                                                                                                                                                      
   # Diseño de skills                                                                                                                                       
                                                                                                                                                            
   Antes de escribir o implementar una skill, documenta aquí su diseño. Completa una sección por cada skill que se vaya a implementar. No empieces a        
@@ -22,6 +21,4 @@ funcionó.]
                                                                                                                                                            
   ---                                                                                                                                                      
                                                                                                                                                            
-  <!-- Duplica la plantilla anterior para cada skill que se vaya a implementar. -->                                                                        
-  EOF                                                                                                                                                      
-```                                  
+                               
