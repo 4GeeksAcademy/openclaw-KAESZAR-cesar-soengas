@@ -1,0 +1,19 @@
+---
+name: google-calendar
+description: Consulta la disponibilidad y gestiona eventos de Google Calendar cuando el usuario solicite buscar, crear o actualizar una reunión; confirma fechas, zonas horarias y destinatarios ambiguos antes de modificar el calendario. 
+---
+
+# Google Calendar
+
+Utiliza esta habilidad para realizar consultas y gestionar eventos en Google Calendar. Describe cómo el agente debe utilizar una integración de Calendar autorizada y disponible; por sí misma, no instala `gog`, no concede acceso a Google ni autoriza OAuth. 
+
+## Flujo de trabajo
+
+1. **Verifica la disponibilidad de la herramienta antes de manipular datos del calendario.** La habilidad `gog` de OpenClaw incluida documenta los comandos de Calendar, pero requiere el binario `gog` y la configuración de OAuth. Verifica que la herramienta necesaria esté realmente disponible y autorizada en este entorno de ejecución. Si falta, no inventes un comando alternativo ni afirmes tener acceso; informa al usuario sobre el impedimento exacto y detente. 
+2. **Clasifica la solicitud.** Distingue entre listar/buscar eventos, comprobar disponibilidad, crear un evento, actualizar un evento y eliminar un evento. Una solicitud para redactar una programación no equivale a una solicitud para modificar Calendar. 
+3. **Determina el calendario y el evento.** Utiliza el calendario especificado por el usuario. Si no han especificado ninguno, examina los calendarios disponibles a través de la herramienta conectada y utiliza un calendario principal o predeterminado conocido solo cuando dicha configuración predeterminada sea explícita e inequívoca; de lo contrario, pregunta. Antes de actualizar o eliminar, identifica el evento exacto. Nunca actúes sobre un evento que sea meramente similar. 
+4. **Determina la hora con precisión.** Respeta la zona horaria del calendario cuando esté disponible. Interpreta las fechas relativas según la configuración regional o la fecha actual del usuario solo cuando no haya ambigüedad. Si la interpretación de la zona horaria o la fecha puede alterar la cita y se desconoce, pregunta antes de realizar la acción. Mantén explícitas las horas de inicio y fin; no inventes una duración arbitraria. 
+5. **Comprueba conflictos cuando sea pertinente.** Para solicitudes de disponibilidad o cuando la programación dependa de la disponibilidad, examina el intervalo correspondiente utilizando la herramienta de Calendar autorizada. Informa que la búsqueda abarcó únicamente los calendarios efectivamente consultados; nunca des a entender que tienes acceso a otros calendarios. 
+6. **Confirme cualquier ambigüedad en los datos antes de realizar cambios.** En las operaciones de creación o actualización, confirme si faltan datos o si hay ambigüedad respecto al título, la fecha, la hora de inicio/fin, la zona horaria, el calendario, los invitados o los detalles de la videoconferencia cuando estos elementos afecten al resultado. No añada invitados, videoconferencias, recordatorios, recurrencia ni ubicaciones a menos que la solicitud disponible lo requiera o especifique claramente.
+7. **Realice cambios únicamente conforme a la solicitud explícita del usuario.** Cree o actualice solo los campos del evento solicitados. Exija una autorización clara y explícita para eliminar elementos; si la eliminación solicitada o el elemento objetivo resultan ambiguos, pregunte primero. No ejecute acciones de envío o invitación que excedan lo solicitado por el usuario.
+8. **Verifique e informe.** Tras listar los eventos, resuma los más relevantes indicando el título y la hora o zona horaria adaptada a la configuración local. Tras crear o actualizar un evento, confirme los detalles finales con el usuario, incluyendo cualquier cambio realizado respecto a la solicitud original.
