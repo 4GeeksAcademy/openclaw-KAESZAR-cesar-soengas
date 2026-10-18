@@ -1,0 +1,11 @@
+{
+  "mcp_servers": {
+    "zapier": {
+      "command": "mcporter",
+      "args": ["zapier"],
+      "env": {
+        "ZAPIER_MCP_TOKEN": "${ZAPIER_MCP_TOKEN}"
+      }
+    }
+  }
+}
