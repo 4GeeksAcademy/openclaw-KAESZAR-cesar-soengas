@@ -1,0 +1,12 @@
+{
+  "skills": {
+    "entries": {
+      "authenticate-4geeks": {
+        "enabled": true,
+        "env": {
+          "TOKEN_4GEEKS": "${TOKEN_4GEEKS}"
+        }
+      }
+    }
+  }
+}
