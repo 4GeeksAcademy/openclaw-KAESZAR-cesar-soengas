@@ -62,11 +62,12 @@ Devuelve recursos educativos (ejercicios, lecciones). Soporta paginacin con ?lim
                                                                                                                                      
 ```sh                                                                                                                                
   curl -s -H "Authorization: Token ${TOKEN_4GEEKS}" \                                                                                
-    "httpps://breathecode.herokuapp.com/v1/registry/asset?limit=10"                                                                  
+    "https://breathecode.herokuapp.com/v1/registry/asset?limit=10"                                                                  
 ```                                                                                                                                  
                                                                                                                                      
 Respuestas ante errores                                                                                                              
                                                                                                                                      
 - 401/403 sin mensaje de permiso: Token inválido/inactivo. Pedir nuevo token.                                                        
 - 403 con don't have this capability: read_activity: Cuenta no tiene permiso. Usar alternativa documentada.                          
-- Error de conexión o DNS: API temporalmente no disponible.                                                                           
+- Error de conexión o DNS: API temporalmente no disponible.                                                                          
+```
